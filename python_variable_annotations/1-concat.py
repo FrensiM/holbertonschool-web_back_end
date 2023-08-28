@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''doc'''
+'''documentation'''
 
 
 def concat(str1: str, str2: str) -> str:
