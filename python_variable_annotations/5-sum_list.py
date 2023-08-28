@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''doc'''
+'''documentaion'''
 
 
 from typing import List
