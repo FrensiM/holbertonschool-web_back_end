@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Simpler helper function"""
 import csv
-import math import ceil
+from math import ceil
 from typing import List, Dict
 
 
