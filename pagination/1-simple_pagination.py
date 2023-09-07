@@ -6,10 +6,13 @@ from typing import List
 
 
 def index_range(page, page_size):
-    ''' index range fun'''
+    """
+    Returns a tuple of size two containing a start index and
+    end index corresponding to the range of indexes to return
+    in a list for those particular pagination parameters
+    """
     start = (page - 1) * page_size
     end = start + page_size
-
     return (start, end)
 
 
@@ -33,9 +36,11 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        '''geting page func'''
+        """Returns the appropriate page of the dataset"""
         assert isinstance(page, int) and isinstance(page_size, int)
         assert page > 0 and page_size > 0
+
         idx = index_range(page, page_size)
-        new_ds = self.dataset()
-        return new_ds[idx[0]:]
+        new_dataset = self.dataset()
+
+        return new_dataset[idx[0]:idx[1]]
