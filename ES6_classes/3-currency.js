@@ -14,8 +14,9 @@ export default class HolbertonCourse {
     if (typeof code !== 'string') {
       throw new Error('Name must be a string');
     }
-    this._length = length;
-    }
+    this._code = code;
+  }
+
   get name() {
     return this._name;
   }
@@ -26,7 +27,8 @@ export default class HolbertonCourse {
     }
     this._name = name;
   }
+
   displayFullCurrency() {
-      return `${this._name} (${this._code})`;
-    }
+    return `${this._name} (${this._code})`;
+  }
 }
