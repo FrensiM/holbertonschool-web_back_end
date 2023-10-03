@@ -8,3 +8,5 @@ function handleProfileSignup(firstName, lastName, fileName) {
     console.log(results)
   });
 }
+
+export default handleProfileSignup
